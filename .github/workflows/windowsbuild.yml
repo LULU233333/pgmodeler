@@ -46,3 +46,11 @@ jobs:
      
     - name: Deploying pgModeler
       run: mingw32-make install
+
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: pgmodeler-build
+        path: D:\a\pgmodeler\pgmodeler\build\**
+        retention-days: 90
